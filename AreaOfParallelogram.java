@@ -6,6 +6,8 @@ public class AreaOfParallelogram{
         double base = input.nextDouble();
         double height = input.nextDouble();
         double area = base*height;
+        double perimeter = 2(base+height);
         System.out.println("Area of parallelogram : "+area);
+        System.out.println("Perimeter of parallelogram : "+perimeter);
     }
 }
