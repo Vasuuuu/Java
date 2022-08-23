@@ -1,6 +1,6 @@
 import java.util.Scanner;
-public claas LargestNum{
-public static void main(Strings[] args){
+public class LargestNum{
+public static void main(String[] args){
 int num1,num2,greatest;
 Scanner input = new Scanner(System.in);
 System.out.print("Enter 1st number : ");
