@@ -12,31 +12,22 @@ public static void main(String[] args){
     }
     
     System.out.print("Your array : "+Arrays.toString(arr)+"\n");
-    isPythagoreanTriplet(arr,num);
+    System.out.println(isPythagoreanTriplet(arr,num));
     
 }
- static void isPythagoreanTriplet(int[] arr,int num){
-     boolean flag = false;
-     for(int i =0; i<num;i++){
+ static boolean isPythagoreanTriplet(int[] arr,int num){
+     for(int i=0; i<num;i++){
          for(int j =i+1;j<num;j++){
              for(int k = j+1; k<num;k++){
-                 int a = arr[i]*arr[i];
-                 int b = arr[j]*arr[j];
-                 int c= arr[k]*arr[k];
+                 int a = arr[i]*arr[i],b =arr[j]*arr[j],c= arr[k]*arr[k];
                  if(a==b+c||b==a+c||c==a+b){
-                     flag = true;
-                     
-                 }else{
-                     flag = false;
-                     
-                 }
+                     System.out.println("Pythagorean triplet present in array.");
+                     return true;
+                 };
              }
          }
      }
-     if(flag){
-           System.out.println("Pythagorean Triplet present in array.");
-     }else{
-         System.out.println("Pythagorean Triplet not present in array.");
-     }
+    System.out.println("Pythagorean Triplet not present in array.");
+    return false;
  }
 }
