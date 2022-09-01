@@ -12,30 +12,21 @@ public class cellsWithOddValuesInMatrix{
     static int oddCells(int m,int n,int[][] indices){
         int[][] arr = new int[m][n];
 for(int i=0;i<indices.length;i++){
-    for(int j=0;i<indices[i].length;j++){
-  int row = indices[i][j];
-  for(int k=0;k<arr[i].length;k++){
-      arr[row][k]++;
-  }
-  int col = indices[i][j+1];
-  for(int k=0;k<arr.length;k++){
-      arr[k][col]++;
-  }
-  
+    for(int j=0;j<n;j++){
+  arr[indices[i][0]][j]++;
+    }
+for(int j=0;j<m;j++){
+  arr[j][indices[i][1]]++;
     }
 }
-int count = 0;
-for(int i=0;i<arr.length;i++){
-    for(int j=0;j<arr[i].length;j++){
+    int count=0;
+for(int i=0;i<m;i++){
+    for(int j=0;j<n;j++){
         if((arr[i][j]%2)!=0){
             count++;
         }
     }
 }
-    //    indices = new int[m][n];
-    //    int val = indices[0][1];
-    //    return val;
-    
-   return count;
+return count;
     }
 }
